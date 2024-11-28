@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainrot Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>🚽 Brainrot Quiz 🚽</h1>
+        <p id="greeting">Welcome, Sigma Legend! Let’s see if your brain can handle this rot.</p>
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. If the Skibidi Toilet did a TikTok dance, what would the cameraman most likely do?</p>
+                <label><input type="radio" name="q1" value="A"> Join the dance</label><br>
+                <label><input type="radio" name="q1" value="B"> Film a duet</label><br>
+                <label><input type="radio" name="q1" value="C"> Stitch it with a reaction</label><br>
+                <label><input type="radio" name="q1" value="D"> Run for his life</label>
+            </div>
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. What might Fanum be secretly doing with the taxes he collects?</p>
+                <label><input type="radio" name="q2" value="A"> Paying his bills</label><br>
+                <label><input type="radio" name="q2" value="B"> Funding the Sigma grindset soundtrack</label><br>
+                <label><input type="radio" name="q2" value="C"> Buying a yacht</label><br>
+                <label><input type="radio" name="q2" value="D"> Supporting Skibidi Toilet’s dance classes</label>
+            </div>
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. If knees had Wi-Fi, what might be a surgery-related issue?</p>
+                <label><input type="radio" name="q3" value="A"> The Wi-Fi signal is too weak</label><br>
+                <label><input type="radio" name="q3" value="B"> Surgery comes with a subscription fee</label><br>
+                <label><input type="radio" name="q3" value="C"> You have to upgrade to "Knee Pro"</label><br>
+                <label><input type="radio" name="q3" value="D"> They forget the password</label>
+            </div>
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. Why do we trust the cameraman during the Skibidi apocalypse?</p>
+                <label><input type="radio" name="q4" value="A"> He has clean lenses</label><br>
+                <label><input type="radio" name="q4" value="B"> He’s the main character</label><br>
+                <label><input type="radio" name="q4" value="C"> He has no idea what’s happening</label><br>
+                <label><input type="radio" name="q4" value="D"> We don’t</label>
+            </div>
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. How would a Sigma male handle the Skibidi apocalypse?</p>
+                <label><input type="radio" name="q5" value="A"> Fight the Toilets</label><br>
+                <label><input type="radio" name="q5" value="B"> Become one with the Toilets</label><br>
+                <label><input type="radio" name="q5" value="C"> Vibe through it like a legend</label><br>
+                <label><input type="radio" name="q5" value="D"> Run away screaming</label>
+            </div>
+            <!-- Question 6 -->
+            <div class="question">
+                <p>6. What happens if you forget to pay the Fanum tax?</p>
+                <label><input type="radio" name="q6" value="A"> You get a fine</label><br>
+                <label><input type="radio" name="q6" value="B"> Giga Chad shows up to repossess your vibes</label><br>
+                <label><input type="radio" name="q6" value="C"> Your Sigma license gets revoked</label><br>
+                <label><input type="radio" name="q6" value="D"> Nothing, Fanum doesn’t care</label>
+            </div>
+            <!-- Question 7 -->
+            <div class="question">
+                <p>7. What would Skibidi Toilet’s Grindset TED Talk title most likely be?</p>
+                <label><input type="radio" name="q7" value="A"> "Flush the Competition"</label><br>
+                <label><input type="radio" name="q7" value="B"> "How to Skibidi Your Way to Success"</label><br>
+                <label><input type="radio" name="q7" value="C"> "Sigma Moves: Toilet Edition"</label><br>
+                <label><input type="radio" name="q7" value="D"> "Why I’m Always in the Spotlight"</label>
+            </div>
+            <!-- Question 8 -->
+            <div class="question">
+                <p>8. Are knees just reverse elbows?</p>
+                <label><input type="radio" name="q8" value="A"> Yes, scientifically proven</label><br>
+                <label><input type="radio" name="q8" value="B"> No, they’re completely different</label><br>
+                <label><input type="radio" name="q8" value="C"> Only if you believe in Sigma anatomy</label><br>
+                <label><input type="radio" name="q8" value="D"> This question is too cursed to answer</label>
+            </div>
+            <!-- Question 9 -->
+            <div class="question">
+                <p>9. If Sigma males don’t chase anything, how do they get their bag?</p>
+                <label><input type="radio" name="q9" value="A"> Bags chase them</label><br>
+                <label><input type="radio" name="q9" value="B"> They steal from Beta males</label><br>
+                <label><input type="radio" name="q9" value="C"> They don’t need money, just vibes</label><br>
+                <label><input type="radio" name="q9" value="D"> Fanum pays them in taxes</label>
+            </div>
+            <!-- Question 10 -->
+            <div class="question">
+                <p>10. What is the true dynamic between Sigma males and toilets?</p>
+                <label><input type="radio" name="q10" value="A"> Sigma males serve the toilets</label><br>
+                <label><input type="radio" name="q10" value="B"> Toilets are the Sigma’s thrones</label><br>
+                <label><input type="radio" name="q10" value="C"> Mutual respect and no drama</label><br>
+                <label><input type="radio" name="q10" value="D"> The grindset doesn’t involve toilets</label>
+            </div>
+
+            <button type="submit">Submit Answers</button>
+        </form>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "B",
+            q2: "B",
+            q3: "D",
+            q4: "D",
+            q5: "C",
+            q6: "B",
+            q7: "B",
+            q8: "C",
+            q9: "A",
+            q10: "B"
+        };
+
+        document.getElementById("quiz-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            let score = 0;
+            const formData = new FormData(e.target);
+
+            for (const [question, answer] of Object.entries(correctAnswers)) {
+                if (formData.get(question) === answer) {
+                    score++;
+                }
+            }
+
+            localStorage.setItem("quizScore", score);
+            window.location.href = "certificate.html";
+        });
+    </script>
+</body>
+</html>

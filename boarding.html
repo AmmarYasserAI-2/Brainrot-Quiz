@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to the Brainrot Quiz</title>
+    <link
+      rel="icon"
+      href="Screenshot_2024-11-28_162520-transformed-fotor-bg-remover-20241128162845.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="boarding-container">
+      <h1>Welcome to the Ultimate Brainrot Quiz</h1>
+      <p>
+        Think you're Sigma enough to survive the chaos? Let's see if your
+        grindset can handle it.
+      </p>
+      <form id="boarding-form">
+        <label for="player-name" color="white">Enter your Skibidi alias:</label>
+        <input
+          type="text"
+          id="player-name"
+          placeholder="E.g., SigmaWarrior69"
+          required
+        />
+        <button type="submit">Let’s Go 🚀</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("boarding-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          const name = document.getElementById("player-name").value;
+          localStorage.setItem("playerName", name);
+          window.location.href = "quiz.html";
+        });
+    </script>
+  </body>
+</html>

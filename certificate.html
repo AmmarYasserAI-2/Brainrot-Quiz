@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome for icons -->
+
+    <style>
+      @font-face {
+        font-family: "CustomCalligraphy";
+        src: url("./fonts/FreebooterScript.ttf") format("truetype");
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+        flex-direction: column;
+      }
+
+      #certificate {
+        position: relative;
+        width: 1000px;
+        height: 700px;
+        background: url("Blue and Gold Elegant Curved Certificate Of Achievement Certificate.png")
+          no-repeat center center;
+        background-size: cover;
+      }
+
+      .dynamic-text {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-family: "Arial", sans-serif;
+        color: #000;
+      }
+
+      #name {
+        top:80px; /* Adjust this value to position the name correctly */
+        font-weight: bold;
+        font-family: "Playwrite HR Lijeva"; /* Use a fancy font */
+        font-size: 48px; /* Make it large */
+        color: #2e3b55; /* Professional dark blue */
+        font-weight: 600; /* Semi-bold */
+        text-align: center; /* Center alignment */
+        margin-top: 200px; /* Adjust spacing */
+      }
+
+      #score {
+        top: 450px; /* Adjust this value to position the score correctly */
+        font-size: 32px; /* Medium-large size */
+        color: #1a73e8; /* Eye-catching blue */
+        font-weight: 700; /* Bold */
+        text-align: center; /* Center alignment */
+        margin-top: 20px; /* Adjust spacing */
+      }
+
+      #download-btn {
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #2e3b55;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 30px; /* Add some space between the certificate and button */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #download-btn i {
+        margin-right: 10px; /* Space between icon and text */
+      }
+
+      #download-btn:hover {
+        background-color: #1a2b3b;
+      }
+
+      #download-btn:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="certificate">
+      <div id="name" class="dynamic-text">[The Name]</div>
+      <div id="score" class="dynamic-text">Score: [Insert Score Here]</div>
+    </div>
+
+    <!-- Button with icon -->
+    <button id="download-btn">
+      <i class="fas fa-download"></i> Download Certificate
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script>
+      // Fetch data from localStorage
+      const playerName = localStorage.getItem("playerName") || "Player";
+      const quizScore = localStorage.getItem("quizScore") || "0";
+
+      // Set dynamic content
+      document.getElementById("name").textContent = playerName;
+      document.getElementById("score").textContent = `Score: ${quizScore}/10`;
+
+      // Download certificate as image
+      document.getElementById("download-btn").addEventListener("click", () => {
+        html2canvas(document.getElementById("certificate"), { scale: 2 }).then(
+          (canvas) => {
+            const link = document.createElement("a");
+            link.download = `${playerName}_Certificate.png`;
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
